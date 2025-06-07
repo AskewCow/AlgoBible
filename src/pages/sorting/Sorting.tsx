@@ -1,17 +1,17 @@
 import { Link } from 'react-router-dom';
 
 const sortingAlgorithms = [
-  'Quick Sort',
-  'Merge Sort',
-  'Bubble Sort',
-  'Insertion Sort',
-  'Selection Sort',
-  'Heap Sort',
-  'Radix Sort',
-  'Counting Sort',
-  'Bucket Sort',
-  'Shell Sort',
-  'Tim Sort',
+  { name: 'Quick Sort', path: 'Quick' },
+  { name: 'Merge Sort', path: 'Merge' },
+  { name: 'Bubble Sort', path: 'Bubble' },
+  { name: 'Insertion Sort', path: 'Insertion' },
+  { name: 'Selection Sort', path: 'Selection' },
+  { name: 'Heap Sort', path: 'Heap' },
+  { name: 'Radix Sort', path: 'Radix' },
+  { name: 'Counting Sort', path: 'Counting' },
+  { name: 'Bucket Sort', path: 'Bucket' },
+  { name: 'Shell Sort', path: 'Shell' },
+  { name: 'Tim Sort', path: 'Tim' },
 ];
 
 export default function Sorting() {
@@ -36,7 +36,7 @@ export default function Sorting() {
                 step before processing data further.
               </p>
               <p>
-                There’s no single “best” sorting algorithm—each has strengths
+                There’s no single “best” sorting algorithm. Each has strengths
                 depending on factors like how many items need sorting, whether
                 the data is already partly sorted, or if saving memory matters
                 more than speed.
@@ -61,7 +61,7 @@ export default function Sorting() {
               <p>
                 <strong>Stable</strong> algorithms keep the original order of
                 equal items (duplicates), which is helpful when the order has
-                meaning—like sorting people by age while keeping their names in
+                meaning e.g. sorting people by age while keeping their names in
                 the same order.
               </p>
             </div>
@@ -85,13 +85,13 @@ export default function Sorting() {
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-10 lg:gap-14 px-6 sm:px-8 lg:px-20 max-w-screen-xl mx-auto">
-          {sortingAlgorithms.map((algo) => (
+          {sortingAlgorithms.map(({ name, path }) => (
             <Link
-              key={algo}
-              to={`/algorithms/sorting/${algo.toLowerCase().replace(/\s+/g, '-')}`}
+              key={name}
+              to={`/sorting/${path}`}
               className="relative bg-white rounded-lg shadow hover:shadow-lg transition-all h-40 flex items-center justify-center text-2xl font-potta text-bluePrimary hover:bg-blue-50"
             >
-              {algo}
+              {name}
             </Link>
           ))}
         </div>

@@ -13,6 +13,19 @@ import UnionFind from './pages/unionFind/UnionFind';
 import Strings from './pages/strings/Strings';
 import Other from './pages/other/Other';
 
+// Sorting algorithm visualizers
+import Quick from './pages/sorting/Quick';
+import Merge from './pages/sorting/Merge';
+import Bubble from './pages/sorting/Bubble';
+import Insertion from './pages/sorting/Insertion';
+import Selection from './pages/sorting/Selection';
+import Heap from './pages/sorting/Heap';
+import Radix from './pages/sorting/Radix';
+import Counting from './pages/sorting/Counting';
+import Bucket from './pages/sorting/Bucket';
+import Shell from './pages/sorting/Shell';
+import Tim from './pages/sorting/Tim';
+
 function App() {
   return (
     <Router>
@@ -28,6 +41,19 @@ function App() {
           <Route path="/union-find" element={<UnionFind />} />
           <Route path="/strings" element={<Strings />} />
           <Route path="/other" element={<Other />} />
+
+          {/* Sorting Visualizers */}
+          <Route path="/sorting/Quick" element={<Quick />} />
+          <Route path="/sorting/Merge" element={<Merge />} />
+          <Route path="/sorting/Bubble" element={<Bubble />} />
+          <Route path="/sorting/Insertion" element={<Insertion />} />
+          <Route path="/sorting/Selection" element={<Selection />} />
+          <Route path="/sorting/Heap" element={<Heap />} />
+          <Route path="/sorting/Radix" element={<Radix />} />
+          <Route path="/sorting/Counting" element={<Counting />} />
+          <Route path="/sorting/Bucket" element={<Bucket />} />
+          <Route path="/sorting/Shell" element={<Shell />} />
+          <Route path="/sorting/Tim" element={<Tim />} />
         </Routes>
       </Layout>
     </Router>
